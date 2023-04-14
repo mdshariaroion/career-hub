@@ -10,15 +10,10 @@ const FeaturedJobs = () => {
     }
 
     useEffect( () =>{
-        fetch('/public/featuredJobs.json')
+        fetch('/featuredJobs.json')
         .then(res => res.json())
         .then(data => setJobs(data))
     },[])
-
-
-    // console.log(data)
-    // const jobData = useLoaderData();
-    // console.log(jobData)
     return (
         <div>
             <h1 class="text-4xl mt-10 text-center sm:text-5xl md:text-6xl lg:text-7xl">Featured Jobs</h1>
